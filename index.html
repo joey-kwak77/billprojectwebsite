@@ -311,8 +311,8 @@
     .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 30px 0 24px; }
     .toolbar p { margin: 0; color: var(--muted); font-size: 13px; }
 
-    .letter-layout { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; align-items: start; }
-    .letter-sheet { max-width: none; padding: clamp(30px, 5vw, 62px); }
+    .letter-layout { display: block; }
+    .letter-sheet { max-width: 900px; margin: 0 auto; padding: clamp(30px, 5vw, 62px); }
     .letter-top { padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid var(--line); }
     .letter-date { color: var(--muted); font-size: 14px; }
     .letter-recipient { margin-top: 24px; color: var(--ink); font-weight: 700; line-height: 1.45; }
@@ -321,9 +321,6 @@
     .letter-sheet .greeting, .letter-sheet .closing { color: var(--ink); }
     .signature { margin-top: 30px; font-family: Georgia, serif; }
     .signature strong { display: block; font-size: 17px; }
-    .assignment-note { padding: 22px; border: 1px solid #f1dfb7; border-radius: 17px; background: #fff9e9; }
-    .assignment-note h3 { margin-bottom: 9px; color: #7c581b; font-size: 16px; }
-    .assignment-note p { margin: 0; color: #765f35; font-size: 13px; line-height: 1.6; }
     .submission-evidence { max-width: 900px; margin: 34px auto 0; padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: #f8fbfd; }
     .submission-evidence h3 { margin-bottom: 7px; color: var(--navy); font-size: 20px; letter-spacing: -.025em; }
     .submission-evidence p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
@@ -368,7 +365,7 @@
     }
 
     @media print {
-      .site-header, .site-footer, .toolbar, .assignment-note, .page-hero { display: none !important; }
+      .site-header, .site-footer, .toolbar, .page-hero { display: none !important; }
       .page { display: none !important; }
       #letter.page.active, #bill.page.active { display: block !important; }
       body { background: white; }
@@ -546,10 +543,6 @@
               <p class="closing">Sincerely,</p>
               <div class="signature"><strong>Joey Kwak</strong>Canyon Crest Academy</div>
             </article>
-            <aside class="assignment-note">
-              <h3>Submission evidence</h3>
-              <p>After you submit this letter, add a screenshot of the sent email or submission confirmation to this page so your teacher can verify that it was submitted.</p>
-            </aside>
           </div>
           <section class="submission-evidence">
             <h3>Evidence of submission</h3>
